@@ -1,61 +1,31 @@
 import React, { useEffect, useState } from 'react';
 
-function AdminDashboard() {
+function AdminTable() {
   const [users, setUsers] = useState([]);
-  const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    // Fetch utenti
-    fetch('http://localhost:3001/admin/users')
+    fetch('http://localhost:3001/admin/users')  // O la tua API esatta
       .then(res => res.json())
-      .then(data => setUsers(data))
-      .catch(console.error);
-
-    // Fetch ordini
-    fetch('http://localhost:3001/admin/orders')
-      .then(res => res.json())
-      .then(data => setOrders(data))
-      .catch(console.error);
+      .then(data => setUsers(data));
   }, []);
 
   return (
     <div>
-      <h2>Utenti Registrati</h2>
-      {/* tabella utenti */}
+      <h2>Gestione Utenti</h2>
       <table>
         <thead>
-          <tr><th>Nome</th><th>Cognome</th><th>Email</th><th>Cellulare</th></tr>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ruolo</th>
+          </tr>
         </thead>
         <tbody>
-          {users.map(u => (
-            <tr key={u._id}>
-              <td>{u.nome}</td>
-              <td>{u.cognome}</td>
-              <td>{u.email}</td>
-              <td>{u.cellulare}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <h2>Ordini Effettuati</h2>
-      {/* tabella ordini */}
-      <table>
-        <thead>
-          <tr><th>Utente</th><th>Biglietti</th><th>Data</th></tr>
-        </thead>
-        <tbody>
-          {orders.map(o => (
-            <tr key={o._id}>
-              <td>{o.user ? `${o.user.nome} (${o.user.email})` : 'Utente sconosciuto'}</td>
-              <td>
-                <ul>
-                  {o.biglietti.map((b, i) => (
-                    <li key={i}>{b.tipo} - {b.quantità} pezzi - €{b.prezzo}</li>
-                  ))}
-                </ul>
-              </td>
-              <td>{new Date(o.createdAt).toLocaleDateString()}</td>
+          {users.map((user, index) => (
+            <tr key={index}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.role}</td>
             </tr>
           ))}
         </tbody>
@@ -64,4 +34,4 @@ function AdminDashboard() {
   );
 }
 
-export default AdminDashboard;
+export default AdminTable;
