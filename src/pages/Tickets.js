@@ -29,7 +29,7 @@ const Tickets = () => {
   const handleRegister = async () => {
     try {
       // POST al tuo endpoint di registrazione utenti
-      const res = await axios.post('http://localhost:5000/admin/register', user);
+      const res = await axios.post('http://localhost:3001/api/users', user);
       setRegisteredUser(res.data.user); // backend manda user dentro res.data.user
       alert('Registrazione completata');
     } catch (error) {
@@ -52,7 +52,7 @@ const Tickets = () => {
   const handleSendOrder = async () => {
     try {
       // POST ordine al corretto endpoint
-      await axios.post('http://localhost:5000/order/order', {
+      await axios.post('http://localhost:3001/api/orders', {
         userEmail: registeredUser.email,
         items: cart,
       });
