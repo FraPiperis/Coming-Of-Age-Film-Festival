@@ -7,11 +7,12 @@ const ChiSiamo = () => {
     <div className="ChiSiamo-page">
       <header className="ChiSiamo-header">
         <nav className="nav-links">
-          <Link to="/">CHI SIAMO</Link>
-          <Link to="/eventi">EVENTI</Link>
-          <Link to="/festival">FESTIVAL</Link>
-          <Link to="/tickets">BIGLIETTI</Link>
-          <Link to="/contatti">CONTATTI</Link>
+        <Link to="/">HOME</Link>
+          <Link to="/ChiSiamo">CHI SIAMO</Link>
+          <Link to="/Eventi">EVENTI</Link>
+          <Link to="/Festival">FESTIVAL</Link>
+          <Link to="/Tickets">BIGLIETTI</Link>
+          <Link to="/Contatti">CONTATTI</Link>
         </nav>
         <div className="ChiSiamo-title">CHI SIAMO</div>
       </header>
