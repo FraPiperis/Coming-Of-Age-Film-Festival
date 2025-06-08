@@ -1,0 +1,112 @@
+/* Layout base */
+.ChiSiamo-page {
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Header con immagine di sfondo */
+.ChiSiamo-header {
+  background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-cottonbro-10600774.jpg'); /* sostituisci con il tuo path reale */
+  background-size: cover;
+  background-position: center;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Navbar */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #3d3027; 
+}
+
+/* Titolo grande al centro */
+.ChiSiamo-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Corpo pagina */
+.ChiSiamo-body {
+  background-color: #f7f7f7;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-section {
+  background-color: #b5a59f;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  background-color: #b5a59f
+}
+
+/* Cerchio COAFF */
+.about-section::before {
+  content: 'COAFF';
+  min-width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #2d2b2b;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Testo destra */
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.about-section p strong {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-section::before {
+    margin-bottom: 1.5rem;
+  }
+}

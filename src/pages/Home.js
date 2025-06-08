@@ -7,11 +7,12 @@ const Home = () => {
     <div className="home-container">
       <nav className="navbar">
         <ul>
-          <li><a href="#">CHI SIAMO</a></li>
-          <li><a href="#">EVENTI</a></li>
-          <li><a href="#">FESTIVAL</a></li>
+          <li><a href="coaff-frontend\src\pages\Home">HOME</a></li>
+          <li><a href="./ChiSiamo">CHI SIAMO</a></li>
+          <li><a href="./Eventi">EVENTI</a></li>
+          <li><a href="./Festival">FESTIVAL</a></li>
           <li><a href="./Tickets">BIGLIETTI</a></li>
-          <li><a href="#">CONTATTI</a></li>
+          <li><a href="./Contatti">CONTATTI</a></li>
         </ul>
       </nav>
       <div className="hero-content">

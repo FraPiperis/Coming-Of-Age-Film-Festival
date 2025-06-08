@@ -1,5 +1,5 @@
 .tickets-page {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Arial Black', sans-serif;
   background-color: #e0f1f7;
   color: #2c2c2c;
   margin: 0;
@@ -19,8 +19,8 @@
 .header nav a {
   margin: 0 1rem;
   text-decoration: none;
-  font-weight: bold;
-  color: white;
+  font-weight: bolder;
+  color: #3ba6b4;
 }
 
 .header nav a.active {
@@ -31,7 +31,7 @@
   background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-dajana-blakcori-716712365-31940494.jpg'); /* sostituisci con il path corretto */
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;

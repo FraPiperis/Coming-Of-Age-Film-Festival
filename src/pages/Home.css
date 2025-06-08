@@ -32,7 +32,9 @@
   font-size: 16px;
   text-decoration: none;
 }
-
+.navbar ul li a:hover{
+  color:#3d3027
+}
 .hero-content {
   position: absolute;
   bottom: 20%;

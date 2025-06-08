@@ -62,11 +62,12 @@ const Tickets = () => {
     <div className="tickets-page">
       <header className="header">
         <nav>
-          <Link to="/">CHI SIAMO</Link>
-          <Link to="/eventi">EVENTI</Link>
-          <Link to="/festival">FESTIVAL</Link>
-          <Link to="/tickets" className="active">BIGLIETTI</Link>
-          <Link to="/contatti">CONTATTI</Link>
+          <Link to="/" className="active">HOME</Link>
+          <Link to="/ChiSiamo" className="active">CHI SIAMO</Link>
+          <Link to="/Eventi" className="active">EVENTI</Link>
+          <Link to="/Festival" className="active">FESTIVAL</Link>
+          <Link to="/Tickets" className="active">BIGLIETTI</Link>
+          <Link to="/Contatti" className="active">CONTATTI</Link>
         </nav>
       </header>
 

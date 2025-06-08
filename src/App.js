@@ -1,17 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Tickets from './pages/Tickets';
-import Home from './pages/Home';
-import AdminDashboard from './components/AdminDashboard';
-
+import ChiSiamo from './pages/ChiSiamo';
+import Eventi from './pages/Eventi';
+import Festival from './pages/Festival';
+import Contatti from './pages/Contatti';
+import Home from './pages/Home'; // Assicurati di avere anche questa pagina
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tickets" element={<Tickets />} />
-        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/ChiSiamo" element={<ChiSiamo />} />
+        <Route path="/Eventi" element={<Eventi />} />
+        <Route path="/Festival" element={<Festival />} />
+        <Route path="/Tickets" element={<Tickets />} />
+        <Route path="/Contatti" element={<Contatti />} />
       </Routes>
     </Router>
   );
