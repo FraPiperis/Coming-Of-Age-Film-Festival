@@ -9,7 +9,7 @@
   background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-cottonbro-10600774.jpg'); /* sostituisci con il tuo path reale */
   background-size: cover;
   background-position: center;
-  height: 60rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,6 +39,7 @@
 
 /* Titolo grande al centro */
 .ChiSiamo-title {
+  padding-bottom: 10rem;
   font-size: 4rem;
   font-weight: 900;
   color: white;
