@@ -1,4 +1,5 @@
 import React from 'react';
+import './Eventi.css';
 
 const Eventi = () => (
   <div className="page">

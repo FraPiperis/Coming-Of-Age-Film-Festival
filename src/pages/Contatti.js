@@ -1,4 +1,5 @@
 import React from 'react';
+import './Contatti.css';
 
 const Contatti = () => (
   <div className="page">
