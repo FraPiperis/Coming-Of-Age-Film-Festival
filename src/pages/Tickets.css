@@ -1,0 +1,107 @@
+.tickets-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0f1f7;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.header nav a.active {
+  border-bottom: 2px solid white;
+}
+
+.hero {
+  background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-dajana-blakcori-716712365-31940494.jpg'); /* sostituisci con il path corretto */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.registrazione,
+.prenotazione {
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: 0.7rem;
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.biglietti {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.ticket {
+  background-color: #3a2e28;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+}
+
+.ticket button {
+  background-color: white;
+  color: #3a2e28;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,54 @@
+.home-container {
+  background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-cottonbro-7222578.jpg'); /* Sostituisci con il percorso corretto */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero-content h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
