@@ -1,21 +1,78 @@
-/* Navbar */
-.nav-links {
+.contatti-page {
+  font-family: 'Arial Black', sans-serif;
+  background-color: #e0f1f7;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header coerente */
+.header {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 1rem 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.nav-links a {
+.header nav a {
+  margin: 0 1rem;
   text-decoration: none;
-  color: #000;
-  transition: color 0.2s ease;
+  font-weight: bolder;
+  color: #3ba6b4;
 }
 
-.nav-links a:hover {
-  color: #aa0066;
+.header nav a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Hero con titolo */
+.hero {
+  background-color: #3ba6b4;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Info contatti */
+.contact-info {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #3ba6b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-image: url(C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-160660303-10802331.jpg);
 }

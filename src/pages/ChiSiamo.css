@@ -1,113 +1,92 @@
-/* Layout base */
-.ChiSiamo-page {
-  color: white;
-  font-family: 'Arial Black', sans-serif;
-}
-
-/* Header con immagine di sfondo */
-.ChiSiamo-header {
-  background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-cottonbro-10600774.jpg'); /* sostituisci con il tuo path reale */
+.page-container {
+  background-image: url('C:/Users/francesca/OneDrive/Desktop/Coaff - Festival/coaff-frontend/src/components/pexels-cottonbro-7222578.jpg');
   background-size: cover;
   background-position: center;
-  height: 35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+  overflow-x: hidden;
 }
 
 /* Navbar */
-.nav-links {
+.navbar {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #3d3027; 
-}
-
-/* Titolo grande al centro */
-.ChiSiamo-title {
-  padding-bottom: 10rem;
-  font-size: 4rem;
-  font-weight: 900;
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-/* Corpo pagina */
-.ChiSiamo-body {
-  background-color: #f7f7f7;
-  padding: 3rem 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.about-section {
-  background-color: #b5a59f;
-  background-size: cover;
-  background-position: center;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
   width: 100%;
-  max-width: 1000px;
-  padding: 2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 3rem;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-  background-color: #b5a59f
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* Cerchio COAFF */
-.about-section::before {
-  content: 'COAFF';
-  min-width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background-color: #2d2b2b;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
   color: white;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #3d3027;
+}
+
+/* HERO CON TITOLO CENTRATO INIZIALE */
+.hero-content {
+  height: 100vh; /* prende tutta la schermata iniziale */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  text-align: center;
+  padding-top: 60px; /* spazio per la navbar fissa */
 }
 
-/* Testo destra */
-.about-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-  color: #333;
-}
-
-.about-section p strong {
+.hero-content h1 {
+  font-size: 4rem;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* CONTENUTO CHE APPARE SCORRENDO */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  box-sizing: border-box;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .about-section::before {
-    margin-bottom: 1.5rem;
+  .hero-content h1 {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .content {
+    padding: 20px 15px;
+    font-size: 1rem;
   }
 }

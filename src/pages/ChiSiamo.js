@@ -4,20 +4,23 @@ import './ChiSiamo.css';
 
 const ChiSiamo = () => {
   return (
-    <div className="ChiSiamo-page">
-      <header className="ChiSiamo-header">
-        <nav className="nav-links">
-        <Link to="/">HOME</Link>
-          <Link to="/ChiSiamo">CHI SIAMO</Link>
-          <Link to="/Eventi">EVENTI</Link>
-          <Link to="/Festival">FESTIVAL</Link>
-          <Link to="/Tickets">BIGLIETTI</Link>
-          <Link to="/Contatti">CONTATTI</Link>
-        </nav>
-        <div className="ChiSiamo-title">CHI SIAMO</div>
-      </header>
+    <div className="page-container">
+      <nav className="navbar">
+        <ul>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/chi-siamo">CHI SIAMO</Link></li>
+          <li><Link to="/eventi">EVENTI</Link></li>
+          <li><Link to="/festival">FESTIVAL</Link></li>
+          <li><Link to="/tickets">BIGLIETTI</Link></li>
+          <li><Link to="/contatti">CONTATTI</Link></li>
+        </ul>
+      </nav>
 
-      <div className="ChiSiamo-body chisiamo-body">
+      <div className="hero-content">
+        <h1>CHI SIAMO</h1>
+      </div>
+
+      <main className="content">
         <section className="about-section">
           <p>
             Il Coming of Age Film Festival nasce con l’intento di celebrare il cinema di formazione in tutte le sue sfumature. 
@@ -33,7 +36,7 @@ const ChiSiamo = () => {
             Unisciti a noi per vivere un'esperienza culturale unica, dove ogni film è un viaggio e ogni spettatore un protagonista.
           </p>
         </section>
-      </div>
+      </main>
     </div>
   );
 };

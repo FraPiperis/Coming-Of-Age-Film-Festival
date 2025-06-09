@@ -6,6 +6,7 @@ import Eventi from './pages/Eventi';
 import Festival from './pages/Festival';
 import Contatti from './pages/Contatti';
 import Home from './pages/Home'; // Assicurati di avere anche questa pagina
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
