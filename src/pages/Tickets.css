@@ -1,107 +1,83 @@
-.tickets-page {
-  font-family: 'Arial Black', sans-serif;
-  background-color: #e0f1f7;
-  color: #2c2c2c;
-  margin: 0;
-  padding: 0;
-}
+/* tickets-content, registrazione, prenotazione ecc */
 
-.header {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bolder;
-  color: #3ba6b4;
-}
-
-.header nav a.active {
-  border-bottom: 2px solid white;
-}
-
-.hero {
-  background-image: url('C:\Users\francesca\OneDrive\Desktop\Coaff - Festival\coaff-frontend\src\components\pexels-dajana-blakcori-716712365-31940494.jpg'); /* sostituisci con il path corretto */
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 4rem;
+.tickets-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
   color: white;
-  font-weight: bold;
 }
 
-.registrazione,
-.prenotazione {
-  padding: 2rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.registrazione, .prenotazione {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .form input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
 }
 
 .form button {
-  padding: 0.7rem;
-  background-color: #2c2c2c;
-  color: white;
+  background-color: #f39c12;
   border: none;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: black;
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .biglietti {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .ticket {
-  background-color: #3a2e28;
-  color: white;
-  padding: 1rem;
+  background-color: #222;
+  padding: 10px 15px;
+  border-radius: 5px;
+  flex: 1 1 150px;
   display: flex;
   justify-content: space-between;
-  border-radius: 6px;
+  align-items: center;
 }
 
 .ticket button {
-  background-color: white;
-  color: #3a2e28;
+  background-color: #f39c12;
   border: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: 700;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .checkout-btn {
-  background-color: #2c2c2c;
-  color: white;
-  font-size: 1.2rem;
-  padding: 0.8rem 1.5rem;
+  background-color: #f39c12;
   border: none;
-  border-radius: 8px;
+  padding: 15px 25px;
+  font-weight: 700;
   cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .biglietti {
+    flex-direction: column;
+  }
+
+  .ticket {
+    justify-content: space-between;
+  }
 }

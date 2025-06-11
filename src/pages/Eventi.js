@@ -1,36 +1,44 @@
-import React from "react";
-import "./Eventi.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Eventi.css";
 
-// ✅ Importa le immagini con percorsi corretti
 import bgImage from "../components/pexels-cottonbro-10506366.jpg";
-import eventoImg from "../components/pexels-cottonbro-10506366.jpg"; // Puoi usare un'altra immagine se serve
+import eventoImg from "../components/pexels-cottonbro-10506366.jpg";
 
 const Eventi = () => {
-  return (
-    <div className="eventi-page">
-      {/* HEADER */}
-      <header className="header">
-        <nav className="nav-links">
-          <Link to="/">HOME</Link>
-          <Link to="/chi-siamo">CHI SIAMO</Link>
-          <Link to="/eventi">EVENTI</Link>
-          <Link to="/festival">FESTIVAL</Link>
-          <Link to="/tickets">BIGLIETTI</Link>
-          <Link to="/contatti">CONTATTI</Link>
-        </nav>
-      </header>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      {/* HERO */}
-      <div
-        className="eventi-hero"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <h1 className="eventi-title">EVENTI</h1>
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  return (
+    <div className="page-container">
+      <nav className="navbar">
+        <div className="logo">COAFF</div>
+
+        <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
+          <li><Link to="/ChiSiamo" onClick={closeMenu}>CHI SIAMO</Link></li>
+          <li><Link to="/Eventi" onClick={closeMenu}>EVENTI</Link></li>
+          <li><Link to="/Festival" onClick={closeMenu}>FESTIVAL</Link></li>
+          <li><Link to="/Tickets" onClick={closeMenu}>BIGLIETTI</Link></li>
+          <li><Link to="/Contatti" onClick={closeMenu}>CONTATTI</Link></li>
+        </ul>
+      </nav>
+
+      <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className="title-group">
+          <h1 className="main-title">EVENTI</h1>
+        </div>
       </div>
 
-      {/* CONTENUTO */}
-      <div className="eventi-content">
+      <main className="content eventi-content">
         <div className="evento-box">
           <div className="evento-numero">
             <h2>EVENTO 1</h2>
@@ -38,13 +46,12 @@ const Eventi = () => {
           <div className="evento-dettagli">
             <img src={eventoImg} alt="Evento 1" />
             <p>
-              Un evento speciale che celebra il cinema indipendente e le storie
-              di formazione. Vieni a scoprire i talenti emergenti del panorama
-              cinematografico internazionale.
+              Un evento speciale che celebra il cinema indipendente e le storie di formazione. 
+              Vieni a scoprire i talenti emergenti del panorama cinematografico internazionale.
             </p>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

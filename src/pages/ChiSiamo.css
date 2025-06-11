@@ -1,92 +1,159 @@
+/* Container generale */
 .page-container {
-  background-image: url('C:/Users/francesca/OneDrive/Desktop/Coaff - Festival/coaff-frontend/src/components/pexels-cottonbro-7222578.jpg');
-  background-size: cover;
-  background-position: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212; /* puoi cambiare se vuoi uno sfondo */
   color: white;
-  font-family: 'Arial Black', sans-serif;
-  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 40px;
 }
 
-/* Navbar */
+/* Navbar - identica a Home.css */
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  position: relative;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
 }
 
-.navbar ul {
-  list-style: none;
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+/* Link nav */
+.nav-links {
   display: flex;
-  gap: 40px;
+  list-style: none;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-.navbar ul li a {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
+/* Link singoli */
+.nav-links li a {
   text-decoration: none;
-  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: #3d3027;
+.nav-links li a:hover {
+  color: #f39c12;
 }
 
-/* HERO CON TITOLO CENTRATO INIZIALE */
+/* Hamburger menu - nascosto su desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hero content */
 .hero-content {
-  height: 100vh; /* prende tutta la schermata iniziale */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 60px; /* spazio per la navbar fissa */
+  padding: 40px 20px 20px 20px;
+  color: white;
 }
 
-.hero-content h1 {
+.title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
   font-size: 4rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin: 0;
 }
 
-/* CONTENUTO CHE APPARE SCORRENDO */
+/* Contenuto principale */
 .content {
   max-width: 900px;
   margin: 0 auto;
-  margin-top: 60px;
-  padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  font-size: 1.2rem;
+  padding: 0 20px;
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: white;
-  box-sizing: border-box;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
+/* Section about */
+.about-section p {
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE - Mobile */
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    height: calc(100% - 65px);
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
     gap: 20px;
+    z-index: 20;
   }
 
-  .hero-content h1 {
-    font-size: 2.5rem;
-    padding: 0 1rem;
+  .nav-links.open {
+    transform: translateX(0);
   }
 
-  .content {
-    padding: 20px 15px;
-    font-size: 1rem;
+  .nav-links li a {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero content: ridimensiona titolo */
+  .main-title {
+    font-size: 2.8rem;
   }
 }

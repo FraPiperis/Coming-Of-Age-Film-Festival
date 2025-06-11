@@ -1,10 +1,192 @@
-import React from 'react';
-import './Festival.css';
-const Festival = () => (
-  <div className="page">
-    <h1>Festival</h1>
-    <p>Informazioni sul festival.</p>
-  </div>
-);
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Festival.css";
+
+const Festival = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
+  const filmInConcorso = [
+    {
+      titolo: "THE RED ISLAND",
+      descrizione:
+        "Un adolescente affronta una difficile realtà in Madagascar, esplorando famiglia e identità.",
+      locandina:
+        "/red island.jpg",
+    },
+    {
+      titolo: "AFTERSUN",
+      descrizione:
+        "Un padre e una figlia condividono momenti preziosi in una vacanza estiva in Turchia.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTkxNjAzOTcyNF5BMl5BanBnXkFtZTgwNTQzMjg5NjM@._V1_.jpg",
+    },
+    {
+      titolo: "WAR PONY",
+      descrizione:
+        "Due ragazzi nativi americani navigano tra cultura, famiglia e difficoltà contemporanee.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMDU4YjU2MDQtMzIxZi00ZmQ3LWJjYmQtY2I5OGZjNzU3N2EyXkEyXkFqcGdeQXVyNjU3ODg3OTQ@._V1_.jpg",
+    },
+    {
+      titolo: "THE FABELMANS",
+      descrizione:
+        "Un ragazzo scopre la sua passione per il cinema e affronta le sfide della famiglia.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BODQ0MTAzNjItNTYzNy00YzYxLTg1NjEtMzBiNTFiOTVkYjY3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+    },
+    {
+      titolo: "WHEN YOU FINISH SAVING THE WORLD",
+      descrizione:
+        "Una madre e un figlio si confrontano sulle loro ambizioni e i sogni da realizzare.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTcyMzQ4ODU2Ml5BMl5BanBnXkFtZTgwMTQ3MjEyNzM@._V1_.jpg",
+    },
+    {
+      titolo: "BELFAST",
+      descrizione:
+        "La crescita di un bambino durante i turbolenti anni '60 nella città di Belfast.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BM2E0NTI3MDAtZjA5OS00MTAzLWEzZDktYzA3NDI3M2MxYzYzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    },
+    {
+      titolo: "DRIVEWAYS",
+      descrizione:
+        "Due outsider formano un legame inaspettato durante una tranquilla estate in campagna.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTk0MjcwNzE0Nl5BMl5BanBnXkFtZTgwMzg1Mjc2NDM@._V1_.jpg",
+    },
+    {
+      titolo: "HONEY BOY",
+      descrizione:
+        "Un giovane attore affronta il passato complicato con il padre mentre cresce sotto i riflettori.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BYTZlMjRlZGQtODRmMS00MTYwLWI1MjctMjBhMTYyNDQ1ZTJkXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    },
+    {
+      titolo: "TEEN SPIRIT",
+      descrizione:
+        "Una giovane cantante lotta per la fama e la propria identità in un talent show competitivo.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTQ2MzYyNjQ5N15BMl5BanBnXkFtZTgwNjA2MDQ0NzM@._V1_.jpg",
+    },
+    {
+      titolo: "ALPHA",
+      descrizione:
+        "Un giovane cacciatore preistorico affronta la sopravvivenza e l'amicizia in un mondo ostile.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTgwMDMyMzUxMV5BMl5BanBnXkFtZTgwNzQxMDM1NTM@._V1_.jpg",
+    },
+    {
+      titolo: "MID90s",
+      descrizione:
+        "L’adolescenza a Los Angeles negli anni '90, tra skate, amicizie e ribellioni.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTQ4NjE5MDAwMV5BMl5BanBnXkFtZTgwMTg1NTc2NzM@._V1_.jpg",
+    },
+    {
+      titolo: "MUD",
+      descrizione:
+        "Due ragazzi scoprono un uomo in fuga e vivono un’avventura di crescita sul Mississippi.",
+      locandina:
+        "https://m.media-amazon.com/images/M/MV5BMTc5NjIxNjQ4OF5BMl5BanBnXkFtZTcwNzAxMzU4OA@@._V1_.jpg",
+    },
+  ];
+
+  return (
+    <div className="page-container">
+      <nav className="navbar">
+        <div className="logo">COAFF</div>
+
+        <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/" onClick={closeMenu}>
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link to="/ChiSiamo" onClick={closeMenu}>
+              CHI SIAMO
+            </Link>
+          </li>
+          <li>
+            <Link to="/Eventi" onClick={closeMenu}>
+              EVENTI
+            </Link>
+          </li>
+          <li>
+            <Link to="/Festival" onClick={closeMenu} className="active">
+              FESTIVAL
+            </Link>
+          </li>
+          <li>
+            <Link to="/Tickets" onClick={closeMenu}>
+              BIGLIETTI
+            </Link>
+          </li>
+          <li>
+            <Link to="/Contatti" onClick={closeMenu}>
+              CONTATTI
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="hero-content">
+        <div className="title-group">
+          <h1 className="main-title">FESTIVAL</h1>
+        </div>
+      </div>
+
+      <main className="content festival-content">
+        {/* Date Festival */}
+        <section className="date-festival">
+          <h2>DATE DEL FESTIVAL</h2>
+          <p>Dal 10 al 13 Maggio 2026, presso il Cinema Centrale di Roma.</p>
+        </section>
+
+        {/* Film in concorso */}
+        <section className="film-in-concorso">
+          <h2>FILM IN CONCORSO</h2>
+          <div className="film-list">
+            {filmInConcorso.map((film, i) => (
+              <div className="film-card" key={i}>
+                <img src={film.locandina} alt={`Locandina ${film.titolo}`} />
+                <h3>{film.titolo}</h3>
+                <p>{film.descrizione}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Sezione Y2K */}
+        <section className="y2k-section">
+          <h2>SEZIONE Y2K</h2>
+          <p>
+            Una selezione speciale di film che esplorano la cultura, la musica e lo stile degli anni
+            2000, celebrando l'estetica Y2K in tutte le sue forme.
+          </p>
+        </section>
+
+        {/* Masterclass */}
+        <section className="masterclass-section">
+          <h2>MASTERCLASS</h2>
+          <p>
+            Workshop e incontri con registi, attori e professionisti del settore per approfondire
+            temi legati al cinema e alla produzione audiovisiva.
+          </p>
+        </section>
+      </main>
+    </div>
+  );
+};
 
 export default Festival;

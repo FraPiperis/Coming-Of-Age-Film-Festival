@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ChiSiamo.css';
 
 const ChiSiamo = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <div className="page-container">
       <nav className="navbar">
-        <ul>
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/chi-siamo">CHI SIAMO</Link></li>
-          <li><Link to="/eventi">EVENTI</Link></li>
-          <li><Link to="/festival">FESTIVAL</Link></li>
-          <li><Link to="/tickets">BIGLIETTI</Link></li>
-          <li><Link to="/contatti">CONTATTI</Link></li>
+        <div className="logo">COAFF</div>
+
+        <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
+          <li><Link to="/ChiSiamo" onClick={closeMenu}>CHI SIAMO</Link></li>
+          <li><Link to="/Eventi" onClick={closeMenu}>EVENTI</Link></li>
+          <li><Link to="/Festival" onClick={closeMenu}>FESTIVAL</Link></li>
+          <li><Link to="/Tickets" onClick={closeMenu}>BIGLIETTI</Link></li>
+          <li><Link to="/Contatti" onClick={closeMenu}>CONTATTI</Link></li>
         </ul>
       </nav>
 
       <div className="hero-content">
-        <h1>CHI SIAMO</h1>
+        <div className="title-group">
+          <h1 className="main-title">CHI SIAMO</h1>
+          {/* Se vuoi, puoi aggiungere un sottotitolo qui, altrimenti si può rimuovere */}
+        </div>
       </div>
 
       <main className="content">
