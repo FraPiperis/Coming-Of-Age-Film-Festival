@@ -14,84 +14,84 @@ const Festival = () => {
       descrizione:
         "Un adolescente affronta una difficile realtà in Madagascar, esplorando famiglia e identità.",
       locandina:
-        "/red island.jpg",
+        "./red island.jpg",
     },
     {
       titolo: "AFTERSUN",
       descrizione:
         "Un padre e una figlia condividono momenti preziosi in una vacanza estiva in Turchia.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTkxNjAzOTcyNF5BMl5BanBnXkFtZTgwNTQzMjg5NjM@._V1_.jpg",
+        "./aftersun.webp",
     },
     {
       titolo: "WAR PONY",
       descrizione:
         "Due ragazzi nativi americani navigano tra cultura, famiglia e difficoltà contemporanee.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMDU4YjU2MDQtMzIxZi00ZmQ3LWJjYmQtY2I5OGZjNzU3N2EyXkEyXkFqcGdeQXVyNjU3ODg3OTQ@._V1_.jpg",
+        "./war pony.png",
     },
     {
       titolo: "THE FABELMANS",
       descrizione:
         "Un ragazzo scopre la sua passione per il cinema e affronta le sfide della famiglia.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BODQ0MTAzNjItNTYzNy00YzYxLTg1NjEtMzBiNTFiOTVkYjY3XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+        "./the fabelmans.jpg",
     },
     {
       titolo: "WHEN YOU FINISH SAVING THE WORLD",
       descrizione:
         "Una madre e un figlio si confrontano sulle loro ambizioni e i sogni da realizzare.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTcyMzQ4ODU2Ml5BMl5BanBnXkFtZTgwMTQ3MjEyNzM@._V1_.jpg",
+        "./when-you-finish-saving-the-world.jpg",
     },
     {
       titolo: "BELFAST",
       descrizione:
         "La crescita di un bambino durante i turbolenti anni '60 nella città di Belfast.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BM2E0NTI3MDAtZjA5OS00MTAzLWEzZDktYzA3NDI3M2MxYzYzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+        "./Belfast.jpg",
     },
     {
       titolo: "DRIVEWAYS",
       descrizione:
         "Due outsider formano un legame inaspettato durante una tranquilla estate in campagna.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTk0MjcwNzE0Nl5BMl5BanBnXkFtZTgwMzg1Mjc2NDM@._V1_.jpg",
+        "./driveways.jpg",
     },
     {
       titolo: "HONEY BOY",
       descrizione:
         "Un giovane attore affronta il passato complicato con il padre mentre cresce sotto i riflettori.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BYTZlMjRlZGQtODRmMS00MTYwLWI1MjctMjBhMTYyNDQ1ZTJkXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        "./honey boy.jpg",
     },
     {
       titolo: "TEEN SPIRIT",
       descrizione:
         "Una giovane cantante lotta per la fama e la propria identità in un talent show competitivo.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTQ2MzYyNjQ5N15BMl5BanBnXkFtZTgwNjA2MDQ0NzM@._V1_.jpg",
+        "./teen spirit.jpg",
     },
     {
       titolo: "ALPHA",
       descrizione:
         "Un giovane cacciatore preistorico affronta la sopravvivenza e l'amicizia in un mondo ostile.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTgwMDMyMzUxMV5BMl5BanBnXkFtZTgwNzQxMDM1NTM@._V1_.jpg",
+        "./alpha.webp",
     },
     {
       titolo: "MID90s",
       descrizione:
         "L’adolescenza a Los Angeles negli anni '90, tra skate, amicizie e ribellioni.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTQ4NjE5MDAwMV5BMl5BanBnXkFtZTgwMTg1NTc2NzM@._V1_.jpg",
+        "./mid90.jpg",
     },
     {
       titolo: "MUD",
       descrizione:
         "Due ragazzi scoprono un uomo in fuga e vivono un’avventura di crescita sul Mississippi.",
       locandina:
-        "https://m.media-amazon.com/images/M/MV5BMTc5NjIxNjQ4OF5BMl5BanBnXkFtZTcwNzAxMzU4OA@@._V1_.jpg",
+        "mud.jpg",
     },
   ];
 
