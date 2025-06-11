@@ -39,8 +39,8 @@ const Contatti = () => {
         <ul>
           <li>
             <i className="fab fa-letterboxd"></i> Letterboxd:{' '}
-            <a href="https://letterboxd.com/" target="_blank" rel="noopener noreferrer">
-              Visita
+            <a href="https://boxd.it/e9ntP" target="_blank" rel="noopener noreferrer">
+              Letterboxd Coaff
             </a>
           </li>
           <li>
@@ -51,14 +51,14 @@ const Contatti = () => {
           </li>
           <li>
             <i className="fab fa-spotify"></i> Spotify:{' '}
-            <a href="https://spotify.com/" target="_blank" rel="noopener noreferrer">
-              Playlist
+            <a href="https://open.spotify.com/user/31ksu5hrjk22ytfcstoxj6a4cwje?si=VQzkcn2DSx-8V0nUlLCA8Q&nd=1&dlsi=4e7bd8d7adbb45e7" target="_blank" rel="noopener noreferrer">
+              COAFF
             </a>
           </li>
           <li>
             <i className="fab fa-tiktok"></i> TikTok:{' '}
             <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
-              @coafestival
+              @coaffilmfest
             </a>
           </li>
           <li>
