@@ -37,15 +37,42 @@ const Eventi = () => {
         </div>
       </div>
 
-      <main className="content eventi-content">
-        <div className="evento-section" style={{ marginTop: "60px" }}>
-          <div className="evento-circle">
-            <span>EVENTO<br />1</span>
-          </div>
-          <div className="evento-poster">
-            <img src="/locandina-evento-1.png" alt="Evento 1" />
-          </div>
-        </div>
+      <main className="eventi-content">
+        <section className="about-section-glass">
+          <h2>Concerti Live 🎸</h2>
+          <p>
+            Vivi l’energia di un concerto dal vivo con giovani band emergenti! 🎶✨
+            Un’esplosione di musica, luci e adrenalina per chi ama le emozioni forti!
+          </p>
+          <img src="/concerti.png" alt="Concerto Live" className="evento-img" />
+        </section>
+
+        <section className="about-section-glass">
+          <h2>Aperitivi🍹</h2>
+          <p>
+            Un momento di relax tra un film e l’altro 🧡🥂
+            Cocktail, stuzzichini e chiacchiere con altri appassionati di cinema!
+          </p>
+          <img src="/aperitivi.png" alt="Aperitivo" className="evento-img" />
+        </section>
+
+        <section className="about-section-glass">
+          <h2>Q&A con regista 🎥</h2>
+          <p>
+            Incontra i registi protagonisti del festival 🎬🗣️
+            Un’occasione unica per porre domande e scoprire i retroscena dei film!
+          </p>
+          <img src="/registi.png" alt="Q&A" className="evento-img" />
+        </section>
+
+        <section className="about-section-glass">
+          <h2>Gara Corti 🏆</h2>
+          <p>
+            I migliori cortometraggi si sfidano per il premio finale! 📽️🔥
+            Vota il tuo corto preferito e sostieni i giovani registi!
+          </p>
+          <img src="/corti.png" alt="Gara Corti" className="evento-img" />
+        </section>
       </main>
     </div>
   );

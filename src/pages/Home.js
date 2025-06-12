@@ -40,6 +40,7 @@ const Home = () => {
         <div className="title-group">
           <h1 className="main-title">COAFF</h1>
           <h2 className="subtitle">COMING OF AGE FILM FESTIVAL</h2>
+          <Link to="/Festival" className="animated-btn">Il festival</Link>
         </div>
       </div>
     </div>

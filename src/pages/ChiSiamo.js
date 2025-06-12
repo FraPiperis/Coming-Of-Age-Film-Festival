@@ -37,6 +37,7 @@ const ChiSiamo = () => {
       </div>
 
       <main className="chi-siamo-content">
+        {/* Prima card */}
         <section className="about-section-glass">
           <p>
             Il Coming of Age Film Festival nasce con l’intento di celebrare il cinema di formazione in tutte le sue sfumature.
@@ -44,12 +45,26 @@ const ChiSiamo = () => {
             tra generazioni attraverso il potere del racconto audiovisivo.
           </p>
           <p>
-            Il festival è organizzato da un team di appassionati di cinema, educatori e creativi che credono nella forza delle storie 
+            Il festival è organizzato da un team di appassionati di cinema e creativi che credono nella forza delle storie 
             per crescere, comprendere e connettersi. Offriamo proiezioni, incontri con autori, workshop e momenti di confronto 
             per un pubblico eterogeneo e curioso.
           </p>
           <p>
             Unisciti a noi per vivere un'esperienza culturale unica, dove ogni film è un viaggio e ogni spettatore un protagonista.
+          </p>
+        </section>
+
+        {/* Seconda card: PROGRAMMA */}
+        <section className="about-section-glass">
+          <h2>PROGRAMMA</h2>
+          <p>
+            Il programma si suddivide in due sezioni cinematografiche con l’attribuzione dei seguenti premi:
+          </p>
+          <p>
+            <strong>Concorso lungometraggi coming of age</strong>: film di fiction e documentari incentrati sul tema del coming of age (durata minima 60 minuti). Premio della Giuria Giovani, scelta tra gli studenti dell’università di Bologna.
+          </p>
+          <p>
+            <strong>Retrospettiva “Y2K”</strong>: film di fiction e documentari incentrati sul coming of age usciti tra il 1 gennaio 2000 e il 31 dicembre 2009 (durata minima 60 minuti). Premio del pubblico.
           </p>
         </section>
       </main>

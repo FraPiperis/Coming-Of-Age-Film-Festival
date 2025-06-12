@@ -7,7 +7,7 @@
   font-family: 'Arial', sans-serif;
   padding-bottom: 40px;
   background-color: #000; /* per coerenza con Contatti */
-} 
+}
 
 /* Navbar */
 .navbar {
@@ -137,6 +137,11 @@
   animation: fadeInUp 1.2s ease-out forwards;
 }
 
+/* Spaziatura tra più card */
+.about-section-glass + .about-section-glass {
+  margin-top: 30px;
+}
+
 .about-section-glass:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.02);
@@ -194,4 +199,3 @@
     height: 200px;
   }
 }
-

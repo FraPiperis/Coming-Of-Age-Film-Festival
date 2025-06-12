@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center; /* Centra la navbar orizzontalmente */
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Background trasparente nero */
+  background-color: rgba(0, 0, 0, 0.9); /* Navbar nera più opaca */
   padding: 15px 20px;
   position: relative;
   z-index: 10;
@@ -98,16 +98,42 @@
   align-items: center;
 }
 
+/* Titolo principale */
 .main-title {
   font-size: 5rem;
   margin: 0;
 }
 
+/* Sottotitolo */
 .subtitle {
   font-size: 1.8rem;
   margin: 10px 0 0 0;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+/* Pulsante animato sotto il titolo, stile originale bianco su nero sfumato */
+.animated-btn {
+  margin-top: 25px;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff; /* testo bianco */
+  background: linear-gradient(45deg, #000, #222);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.animated-btn:hover {
+  background: linear-gradient(45deg, #111, #444);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9);
+  animation: none; /* rimuove animazioni colorate */
 }
 
 /* RESPONSIVE - Mobile */
@@ -146,17 +172,21 @@
     display: flex;
   }
 
-  /* Cambia l'allineamento del titolo e sottotitolo in orizzontale */
+  /* In mobile il titolo e sottotitolo diventano colonna */
   .title-group {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
+  }
+
+  /* Il pulsante si posiziona sotto il titolo */
+  .animated-btn {
+    margin-top: 10px;
   }
 
   .subtitle {
     font-size: 1.2rem;
     margin: 0;
-    align-self: center;
     text-transform: uppercase;
   }
 

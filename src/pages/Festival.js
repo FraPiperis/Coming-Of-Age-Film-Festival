@@ -15,86 +15,88 @@ const Festival = () => {
       titolo: "THE RED ISLAND",
       descrizione:
         "Un adolescente affronta una difficile realtà in Madagascar, esplorando famiglia e identità.",
-      locandina:
-        "./red island.jpg",
+      locandina: "./red island.jpg",
     },
     {
       titolo: "AFTERSUN",
       descrizione:
         "Un padre e una figlia condividono momenti preziosi in una vacanza estiva in Turchia.",
-      locandina:
-        "./aftersun.webp",
+      locandina: "./aftersun.webp",
     },
     {
       titolo: "WAR PONY",
       descrizione:
         "Due ragazzi nativi americani navigano tra cultura, famiglia e difficoltà contemporanee.",
-      locandina:
-        "./war pony.png",
+      locandina: "./war pony.png",
     },
     {
       titolo: "THE FABELMANS",
       descrizione:
         "Un ragazzo scopre la sua passione per il cinema e affronta le sfide della famiglia.",
-      locandina:
-        "./the fabelmans.jpg",
+      locandina: "./the fabelmans.jpg",
     },
     {
       titolo: "WHEN YOU FINISH SAVING THE WORLD",
       descrizione:
         "Una madre e un figlio si confrontano sulle loro ambizioni e i sogni da realizzare.",
-      locandina:
-        "./when-you-finish-saving-the-world.jpg",
+      locandina: "./when-you-finish-saving-the-world.jpg",
     },
     {
       titolo: "BELFAST",
       descrizione:
         "La crescita di un bambino durante i turbolenti anni '60 nella città di Belfast.",
-      locandina:
-        "./Belfast.jpg",
+      locandina: "./Belfast.jpg",
     },
     {
       titolo: "DRIVEWAYS",
       descrizione:
         "Due outsider formano un legame inaspettato durante una tranquilla estate in campagna.",
-      locandina:
-        "./driveways.jpg",
+      locandina: "./driveways.jpg",
     },
     {
       titolo: "HONEY BOY",
       descrizione:
         "Un giovane attore affronta il passato complicato con il padre mentre cresce sotto i riflettori.",
-      locandina:
-        "./honey boy.jpg",
+      locandina: "./honey boy.jpg",
     },
     {
       titolo: "TEEN SPIRIT",
       descrizione:
         "Una giovane cantante lotta per la fama e la propria identità in un talent show competitivo.",
-      locandina:
-        "./teen spirit.jpg",
+      locandina: "./teen spirit.jpg",
     },
     {
       titolo: "ALPHA",
       descrizione:
         "Un giovane cacciatore preistorico affronta la sopravvivenza e l'amicizia in un mondo ostile.",
-      locandina:
-        "./alpha.webp",
+      locandina: "./alpha.webp",
     },
     {
       titolo: "MID90s",
       descrizione:
         "L’adolescenza a Los Angeles negli anni '90, tra skate, amicizie e ribellioni.",
-      locandina:
-        "./mid90.jpg",
+      locandina: "./mid90.jpg",
     },
     {
       titolo: "MUD",
       descrizione:
         "Due ragazzi scoprono un uomo in fuga e vivono un’avventura di crescita sul Mississippi.",
-      locandina:
-        "mud.jpg",
+      locandina: "mud.jpg",
     },
+  ];
+
+  // Dati per il carosello Y2K (10 card)
+  const y2kFilms = [
+    { titolo: "Y tu mamà también", regista: "A. Cuaròn", data: "2001", locandina: "./y tu.jpeg" },
+    { titolo: "Little Miss Sunshine", regista: "J. Dayton e V. Faris", data: "2006", locandina: "./little.jpeg" },
+    { titolo: "My Name is Tanino", regista: "P. Virzì", data: "2002", locandina: "./my name is tanino.jpg" },
+    { titolo: "Spirited Away", regista: "H. Miyazaki", data: "2001", locandina: "./spirited away.jpeg" },
+    { titolo: "Mean Girls", regista: "M. Waters", data: "2004", locandina: "./mean girls.webp" },
+    { titolo: "Persepolis", regista: "V. Paronnaud e M. Satrapi", data: "2007", locandina: "./persepolis.jpeg" },
+    { titolo: "Legally Blonde", regista: "R. Luketic", data: "2001", locandina: "./legally Blonde.jpeg" },
+    { titolo: "Yi Yi", regista: "E. Yang", data: "2000", locandina: "./yi yi.jpeg" },
+    { titolo: "Charlie's Angels", regista: "McG", data: "2000", locandina: "./Charlies Angels.jpeg" },
+    { titolo: "Freaky Friday", regista: "M. Waters", data: "2003", locandina: "./freaky.jpeg" },
   ];
 
   return (
@@ -110,43 +112,31 @@ const Festival = () => {
 
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/" onClick={closeMenu}>
-              HOME
-            </Link>
+            <Link to="/" onClick={closeMenu}>HOME</Link>
           </li>
           <li>
-            <Link to="/ChiSiamo" onClick={closeMenu}>
-              CHI SIAMO
-            </Link>
+            <Link to="/ChiSiamo" onClick={closeMenu}>CHI SIAMO</Link>
           </li>
           <li>
-            <Link to="/Eventi" onClick={closeMenu}>
-              EVENTI
-            </Link>
+            <Link to="/Eventi" onClick={closeMenu}>EVENTI</Link>
           </li>
           <li>
-            <Link to="/Festival" onClick={closeMenu} className="active">
-              FESTIVAL
-            </Link>
+            <Link to="/Festival" onClick={closeMenu} className="active">FESTIVAL</Link>
           </li>
           <li>
-            <Link to="/Tickets" onClick={closeMenu}>
-              BIGLIETTI
-            </Link>
+            <Link to="/Tickets" onClick={closeMenu}>BIGLIETTI</Link>
           </li>
           <li>
-            <Link to="/Contatti" onClick={closeMenu}>
-              CONTATTI
-            </Link>
+            <Link to="/Contatti" onClick={closeMenu}>CONTATTI</Link>
           </li>
         </ul>
       </nav>
-      
+
       <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
-          <div className="title-group">
-              <h1 className="main-title">FESTIVAL</h1>
-              <h3>Dal 10 al 13 Maggio 2026 presso gli ambienti del Cinema Lumierè di Bologna</h3>
-          </div>
+        <div className="title-group">
+          <h1 className="main-title">FESTIVAL</h1>
+          <h3>Dal 10 al 13 Maggio 2026 presso gli ambienti del Cinema Lumierè di Bologna</h3>
+        </div>
       </div>
 
       <main className="content festival-content">
@@ -171,6 +161,18 @@ const Festival = () => {
             Una selezione speciale di film che esplorano la cultura, la musica e lo stile degli anni
             2000, celebrando l'estetica Y2K in tutte le sue forme.
           </p>
+
+          {/* Carosello orizzontale */}
+          <div className="y2k-carousel">
+            {y2kFilms.map((film, i) => (
+              <div className="y2k-card" key={i}>
+                <img src={film.locandina} alt={`Locandina ${film.titolo}`} />
+                <h4>{film.titolo}</h4>
+                <p>{film.regista}</p>
+                <p>{film.data}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Masterclass */}

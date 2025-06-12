@@ -1,5 +1,6 @@
+/* Contenuto principale */
 .festival-content {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   color: white;
@@ -12,9 +13,10 @@
   padding: 20px;
 }
 
+/* Lista film in concorso */
 .film-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
 }
@@ -22,13 +24,16 @@
 .film-card {
   background-color: #222;
   border-radius: 8px;
-  width: 250px;
   padding: 15px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .film-card img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 6px;
   margin-bottom: 10px;
 }
@@ -38,9 +43,90 @@
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 768px) {
+/* Y2K carousel */
+.y2k-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.y2k-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.y2k-carousel::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+.y2k-card {
+  flex: 0 0 auto;
+  width: 180px;
+  background-color: #222;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.y2k-card:hover {
+  transform: scale(1.05);
+}
+
+.y2k-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.y2k-card h4 {
+  font-size: 1rem;
+  margin: 5px 0 4px;
+}
+
+.y2k-card p {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Responsive generale */
+@media (max-width: 768px) {
+  .festival-content {
+    padding: 10px;
+  }
+
   .film-list {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .film-card {
+    padding: 10px;
+  }
+
+  .y2k-card {
+    width: 150px;
+  }
+
+  .y2k-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .film-card h3 {
+    font-size: 1rem;
+  }
+
+  .y2k-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .y2k-card p {
+    font-size: 0.75rem;
   }
 }
