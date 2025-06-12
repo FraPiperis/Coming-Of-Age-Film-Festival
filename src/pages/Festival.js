@@ -142,22 +142,16 @@ const Festival = () => {
         </ul>
       </nav>
       
-      
       <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
           <div className="title-group">
               <h1 className="main-title">FESTIVAL</h1>
+              <h3>Dal 10 al 13 Maggio 2026 presso gli ambienti del Cinema Lumierè di Bologna</h3>
           </div>
       </div>
 
       <main className="content festival-content">
-        {/* Date Festival */}
-        <section className="date-festival">
-          <h2>DATE DEL FESTIVAL</h2>
-          <p>Dal 10 al 13 Maggio 2026, presso il Cinema Centrale di Roma.</p>
-        </section>
-
         {/* Film in concorso */}
-        <section className="film-in-concorso">
+        <section className="film-in-concorso" style={{ marginTop: "60px" }}>
           <h2>FILM IN CONCORSO</h2>
           <div className="film-list">
             {filmInConcorso.map((film, i) => (

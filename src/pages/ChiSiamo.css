@@ -6,38 +6,35 @@
   color: white;
   font-family: 'Arial', sans-serif;
   padding-bottom: 40px;
-}
+  background-color: #000; /* per coerenza con Contatti */
+} 
 
-/* Navbar - identica a Home.css */
+/* Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px 20px;
-  position: relative;
-  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Logo */
 .logo {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  margin-right: 40px;
-  flex-shrink: 0;
 }
 
-/* Link nav */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
-/* Link singoli */
 .nav-links li a {
   text-decoration: none;
   color: white;
@@ -50,7 +47,7 @@
   color: #f39c12;
 }
 
-/* Hamburger menu - nascosto su desktop */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -80,55 +77,93 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Hero content */
+/* HERO (immagine di sfondo con titolo grande) */
 .hero-content {
+  background-image: url(../components/pexels-cottonbro-10506366.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 40px 20px 20px 20px;
-  color: white;
+  position: relative;
+}
+
+.hero-content::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay scuro */
+  z-index: 1;
 }
 
 .title-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .main-title {
   font-size: 4rem;
   margin: 0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
-/* Contenuto principale */
-.content {
+/* Sezione Chi Siamo */
+.chi-siamo-content {
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  font-size: 1.1rem;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Card effetto vetro */
+.about-section-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 25px 30px;
+  max-width: 800px;
+  color: #f5f5f5;
+  font-size: 14px;
   line-height: 1.6;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
-/* Section about */
-.about-section p {
-  margin-bottom: 20px;
+.about-section-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* RESPONSIVE - Mobile */
+/* Animazione fade in */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .navbar {
-    justify-content: space-between;
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 
   .nav-links {
     position: fixed;
-    top: 65px;
+    top: 60px;
     right: 0;
-    height: calc(100% - 65px);
+    height: calc(100% - 60px);
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -151,8 +186,12 @@
     display: flex;
   }
 
-  /* Hero content: ridimensiona titolo */
   .main-title {
     font-size: 2.8rem;
   }
+
+  .hero-content {
+    height: 200px;
+  }
 }
+

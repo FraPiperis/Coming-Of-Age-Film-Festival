@@ -1,9 +1,8 @@
+// ChiSiamo.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ChiSiamo.css';
-
 import bgImage from "../components/pexels-cottonbro-10506366.jpg";
-
 
 const ChiSiamo = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,16 +31,15 @@ const ChiSiamo = () => {
         </ul>
       </nav>
 
-         <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
-              <div className="title-group">
-                <h1 className="main-title">CHI SIAMO</h1>
-              </div>
-            </div>
+      {/* Hero Section Uniformata */}
+      <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
+        <h1 className="main-title">CHI SIAMO</h1>
+      </div>
 
-      <main className="content">
-        <section className="about-section">
+      <main className="chi-siamo-content">
+        <section className="about-section-glass">
           <p>
-            Il Coming of Age Film Festival nasce con l’intento di celebrare il cinema di formazione in tutte le sue sfumature. 
+            Il Coming of Age Film Festival nasce con l’intento di celebrare il cinema di formazione in tutte le sue sfumature.
             La nostra missione è dare spazio a nuove voci del panorama cinematografico e promuovere un dialogo autentico 
             tra generazioni attraverso il potere del racconto audiovisivo.
           </p>

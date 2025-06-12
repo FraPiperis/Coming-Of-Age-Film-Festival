@@ -38,7 +38,7 @@ const Eventi = () => {
       </div>
 
       <main className="content eventi-content">
-        <div className="evento-section">
+        <div className="evento-section" style={{ marginTop: "60px" }}>
           <div className="evento-circle">
             <span>EVENTO<br />1</span>
           </div>
