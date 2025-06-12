@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Eventi.css";
 
 import bgImage from "../components/pexels-cottonbro-10506366.jpg";
-import eventoImg from "../components/pexels-cottonbro-10506366.jpg";
 
 const Eventi = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,16 +38,12 @@ const Eventi = () => {
       </div>
 
       <main className="content eventi-content">
-        <div className="evento-box">
-          <div className="evento-numero">
-            <h2>EVENTO 1</h2>
+        <div className="evento-section">
+          <div className="evento-circle">
+            <span>EVENTO<br />1</span>
           </div>
-          <div className="evento-dettagli">
-            <img src={eventoImg} alt="Evento 1" />
-            <p>
-              Un evento speciale che celebra il cinema indipendente e le storie di formazione. 
-              Vieni a scoprire i talenti emergenti del panorama cinematografico internazionale.
-            </p>
+          <div className="evento-poster">
+            <img src="/locandina-evento-1.png" alt="Evento 1" />
           </div>
         </div>
       </main>

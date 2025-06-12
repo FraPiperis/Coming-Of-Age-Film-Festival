@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import backgroundImage from '../components/pexels-cottonbro-7222578.jpg';
+
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ const Home = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="home-container" style={{ backgroundImage: "url('/sfondo-eventi.png)" }}>
       <nav className="navbar">
         <div className="logo">COAFF</div>
 

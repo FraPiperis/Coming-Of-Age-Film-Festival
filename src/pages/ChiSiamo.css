@@ -3,7 +3,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #121212; /* puoi cambiare se vuoi uno sfondo */
   color: white;
   font-family: 'Arial', sans-serif;
   padding-bottom: 40px;
