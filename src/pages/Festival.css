@@ -130,3 +130,52 @@
     font-size: 0.75rem;
   }
 }
+@media (max-width: 700px) {
+  .festival-content {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .film-list {
+    grid-template-columns: 1fr; /* una colonna sola */
+    gap: 15px;
+  }
+
+  .film-card {
+    max-width: 30%;
+    padding: 12px;
+  }
+
+  .film-card img {
+    max-height: 140px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .film-card h3 {
+    font-size: 1rem;
+  }
+
+  .y2k-carousel {
+    padding: 8px 0;
+  }
+
+  .y2k-card {
+    width: 90%;
+    max-width: 280px;
+    padding: 10px;
+  }
+
+  .y2k-card img {
+    height: 160px;
+    max-height: 160px;
+  }
+
+  .y2k-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .y2k-card p {
+    font-size: 0.75rem;
+  }
+}
