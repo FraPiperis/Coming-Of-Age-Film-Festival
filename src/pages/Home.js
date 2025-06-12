@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
-
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -10,7 +9,15 @@ const Home = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="home-container" style={{ backgroundImage: "url('/sfondo-eventi.png)" }}>
+    <div
+      className="home-container"
+      style={{
+        backgroundImage: "url('/sfondo-eventi.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh"
+      }}
+    >
       <nav className="navbar">
         <div className="logo">COAFF</div>
 

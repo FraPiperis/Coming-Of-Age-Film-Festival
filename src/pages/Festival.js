@@ -145,7 +145,7 @@ const Festival = () => {
       
       <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
           <div className="title-group">
-              <h1 className="main-title">CHI SIAMO</h1>
+              <h1 className="main-title">FESTIVAL</h1>
           </div>
       </div>
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Contatti.css';
 
+import bgImage from "../components/pexels-cottonbro-10506366.jpg";
+
 const Contatti = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,11 +31,11 @@ const Contatti = () => {
         </ul>
       </nav>
 
-      <div className="hero-content">
-        <div className="title-group">
-          <h1 className="main-title">CONTATTI</h1>
-        </div>
-      </div>
+      <div className="hero-content" style={{ backgroundImage: `url(${bgImage})` }}>
+                    <div className="title-group">
+                      <h1 className="main-title">CONTATTI</h1>
+                    </div>
+                  </div>
 
       <main className="content contact-info">
         <ul>
