@@ -93,7 +93,7 @@ const Festival = () => {
     { titolo: "Spirited Away", regista: "H. Miyazaki", data: "2001", locandina: "./spirited away.jpeg" },
     { titolo: "Mean Girls", regista: "M. Waters", data: "2004", locandina: "./mean girls.webp" },
     { titolo: "Persepolis", regista: "V. Paronnaud e M. Satrapi", data: "2007", locandina: "./persepolis.jpeg" },
-    { titolo: "Legally Blonde", regista: "R. Luketic", data: "2001", locandina: "./legally Blonde.jpeg" },
+    { titolo: "Legally Blonde", regista: "R. Luketic", data: "2001", locandina: "./legally blonde.jpeg" },
     { titolo: "Yi Yi", regista: "E. Yang", data: "2000", locandina: "./yi yi.jpeg" },
     { titolo: "Charlie's Angels", regista: "McG", data: "2000", locandina: "./Charlies Angels.jpeg" },
     { titolo: "Freaky Friday", regista: "M. Waters", data: "2003", locandina: "./freaky.jpeg" },
