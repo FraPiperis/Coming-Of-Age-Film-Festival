@@ -33,7 +33,7 @@
 
   <script>
     // Carica utenti
-    fetch('/api/users')
+    fetch('https://coaff-s3il.onrender.com/api/users', { ... })
       .then(res => res.json())
       .then(users => {
         const tbody = document.getElementById('usersTable').querySelector('tbody');
@@ -48,7 +48,7 @@
       });
 
     // Carica ordini
-    fetch('/api/orders')
+    fetch('https://coaff-s3il.onrender.com/api/users', { ... })
       .then(res => res.json())
       .then(orders => {
         const tbody = document.getElementById('ordersTable').querySelector('tbody');
@@ -69,7 +69,7 @@
     function deleteOrder(orderId, btn) {
       if (!confirm('Sei sicuro di voler eliminare questo ordine?')) return;
 
-      fetch(`/api/orders/${orderId}`, {
+      fetch(`https://coaff-s3il.onrender.com/api/orders/${orderId}`, s {
         method: 'DELETE',
       })
       .then(res => {
