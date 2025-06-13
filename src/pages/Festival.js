@@ -184,7 +184,7 @@ const Festival = () => {
              temi legati al cinema e alla produzione audiovisiva.
             </p>
             <div className="masterclass-card">
-              <img src="./masterclass.jpg" alt="Masterclass" />
+              <img src="./cinema.png" alt="Masterclass" />
               <p>Scopri le nostre Masterclass esclusive con ospiti internazionali.</p>
            </div>
           </section>
