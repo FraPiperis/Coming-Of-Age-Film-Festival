@@ -177,11 +177,17 @@ const Festival = () => {
 
         {/* Masterclass */}
         <section className="masterclass-section">
-          <h2>MASTERCLASS</h2>
-          <p>
-            Workshop e incontri con registi, attori e professionisti del settore per approfondire
-            temi legati al cinema e alla produzione audiovisiva.
-          </p>
+          <section className="masterclass-section">
+            <h2>MASTERCLASS</h2>
+            <p>
+             Workshop e incontri con registi, attori e professionisti del settore per approfondire
+             temi legati al cinema e alla produzione audiovisiva.
+            </p>
+            <div className="masterclass-card">
+              <img src="./masterclass.jpg" alt="Masterclass" />
+              <p>Scopri le nostre Masterclass esclusive con ospiti internazionali.</p>
+           </div>
+          </section>
         </section>
       </main>
     </div>
